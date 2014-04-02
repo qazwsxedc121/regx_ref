@@ -13,8 +13,11 @@ exports.regitem = (req, res)->
     context = JSON.parse(context)
     res.render("regitem",context)
   else
-    res.render("regitem",{"id":"NO"})
+    res.render("error",{"message":"没有找到相应编号的正则表达式!"})
 
 
 
 exports.post_regitem = (req,res)->
+  undefined
+
+

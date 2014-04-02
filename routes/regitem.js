@@ -26,13 +26,15 @@
       context = JSON.parse(context);
       return res.render("regitem", context);
     } else {
-      return res.render("regitem", {
-        "id": "NO"
+      return res.render("error", {
+        "message": "没有找到相应编号的正则表达式!"
       });
     }
   };
 
-  exports.post_regitem = function(req, res) {};
+  exports.post_regitem = function(req, res) {
+    return void 0;
+  };
 
 }).call(this);
 

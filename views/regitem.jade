@@ -1,10 +1,7 @@
 //
    Created by guoxc on 14-3-17.
-extends layout
-block content
-  #layout.pure-g
-    include sidebar
-    #main.pure-u-3-4
-      h2 #{name}
-        div #{content}
-        div #{describe}
+extends sidebar_layout
+block main
+  h2 #{name}
+    div #{content}
+    div #{describe}
