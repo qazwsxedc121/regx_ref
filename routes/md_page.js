@@ -9,10 +9,10 @@
   exports.page = function(req, res) {
     var markdown_content, page_name;
     page_name = req.params["name"];
-    markdown_content = fs.readFileSync("static_page/" + page_name + ".md", {
+    markdown_content = fs.readFileSync("md_page/" + page_name + ".md", {
       encoding: "utf-8"
     });
-    return res.render("static_page", {
+    return res.render("md_page", {
       "md": md,
       "markdownContent": markdown_content
     });
