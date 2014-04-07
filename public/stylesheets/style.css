@@ -16,3 +16,11 @@ a {
 #sidebar .sidebar-menu {
   background: #333;
 }
+#main .header {
+  margin: 20px auto;
+  max-width: 768px;
+}
+#main .content {
+  margin: 20px auto;
+  max-width: 768px;
+}

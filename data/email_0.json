@@ -1,7 +1,13 @@
 {
     "name":"email",
-    "content":"\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*",
+    "content":"[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}",
     "describe":"用于验证邮箱",
     "ref":[
+        {
+            "sitename":"TrojanHunter Blog",
+            "link":"http://blog.trojanhunter.com/2012/09/26/the-best-regex-to-validate-an-email-address/"
+        }
+    ],
+    "compare":[
     ]
 }

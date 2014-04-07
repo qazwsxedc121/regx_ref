@@ -2,7 +2,22 @@
    Created by guoxc on 14-3-17.
 extends sidebar_layout
 block main
-  h2 #{name}
-  div #{content}
-  div 用途描述: #{describe}
-  div 参考网址: #{ref}
+  div.header
+      h2 #{name}
+  div.content
+    div #{content}
+    div 用途描述: #{describe}
+    div 参考网址:
+      table.pure-table
+        thead
+          tr
+            th #
+            th source
+        tbody
+          each val, index in ref
+            tr
+              td #{index}
+              td: a(href=val.link) #{val.sitename}
+
+
+
