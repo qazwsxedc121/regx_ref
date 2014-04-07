@@ -1,0 +1,9 @@
+//
+   Created by guoxc on 14-4-7.
+
+extends sidebar_layout
+block main
+  div.header
+    h2 #{name}
+  div.content
+    div!= md(markdownContent)

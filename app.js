@@ -7,6 +7,7 @@ var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var regitem = require('./routes/regitem')
+var md_page = require('./routes/md_page')
 var http = require('http');
 var path = require('path');
 
@@ -35,6 +36,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/regitem/:id', regitem.regitem)
+app.get('/md_page/:name', md_page.page)
 
 app.post('/regitem', regitem.post_regitem)
 
