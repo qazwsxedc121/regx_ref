@@ -10,14 +10,9 @@ block main
           th #
           th 名称
       tbody
-        tr
-          td 1
-          td: a(href="regitem/email_0") email
-        tr
-          td 2
-          td: a(href="regitem/url_0") url
-        tr
-          td 3
-          td: a(href="regitem/ipv4_0") IP(ipv4)
+        each val, index in regex_list
+          tr
+            td #{index}
+            td: a(href="regitem/#{val.id}") #{val.name}
 
 

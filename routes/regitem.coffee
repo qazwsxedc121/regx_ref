@@ -1,15 +1,14 @@
 
-fs = require("fs")
+model = require("../model")
 
 exports.regitem = (req, res)->
   reg_id = req.params["id"]
   console.log(reg_id)
-  flist = fs.readdirSync("data")
-
-  f1 = (f for f in flist when f[0..-6] == reg_id)
+  flist = model.all_ids()
+  f1 = (f for f in flist when f == reg_id)
   console.log(f1)
   if f1[0]
-    context = fs.readFileSync("data/"+f1[0])
+    context = model.find_regitem_by_id(f1[0])
     context = JSON.parse(context)
     res.render("regitem",context)
   else
