@@ -5,8 +5,12 @@ block main
   div.header
       h2 #{name}
   div.content
-    div 表达式: #{expression}
-    div 用途描述: #{describe}
+    div
+      h3 表达式:
+      p #{expression}
+    div
+      h3 用途描述:
+      p #{describe}
     div 参考网址:
       table.pure-table
         thead

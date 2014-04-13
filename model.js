@@ -18,18 +18,18 @@
     })();
   };
 
-  exports.all_ids_names = function() {
-    var c, id, id_f, ids, name, result, _i, _len;
+  exports.all_ids_data = function() {
+    var c, id, id_f, ids, result, _i, _len;
     ids = all_ids();
     result = [];
     for (_i = 0, _len = ids.length; _i < _len; _i++) {
       id = ids[_i];
       id_f = fs.readFileSync("data/" + id + ".json");
       c = JSON.parse(id_f);
-      name = c.name;
       result.push({
         "id": id,
-        "name": name
+        "name": c.name,
+        "useage": c.describe
       });
     }
     return result;

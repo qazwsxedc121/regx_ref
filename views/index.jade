@@ -9,10 +9,11 @@ block main
         tr
           th #
           th 名称
+          th 用途
       tbody
         each val, index in regex_list
           tr
             td #{index}
             td: a(href="regitem/#{val.id}") #{val.name}
-
+            td #{val.useage}
 
