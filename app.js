@@ -6,8 +6,8 @@
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
-var regitem = require('./routes/regitem')
-var md_page = require('./routes/md_page')
+var regitem = require('./routes/regitem');
+var md_page = require('./routes/md_page');
 var http = require('http');
 var path = require('path');
 
@@ -31,14 +31,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
+
 }
+
+var model = require('./model');
+
+model.indexing_regitems();
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/regitem/:id', regitem.regitem)
-app.get('/md_page/:name', md_page.page)
+app.get('/regitem/:id', regitem.regitem);
+app.get('/md_page/:name', md_page.page);
 
-app.post('/regitem', regitem.post_regitem)
+app.post('/regitem', regitem.post_regitem);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

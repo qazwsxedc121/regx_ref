@@ -1,0 +1,1 @@
+[{"id":"email_0","name":"email","useage":"用于验证邮箱"},{"id":"ipv4_0","name":"ipv4","useage":"用于验证ipv4地址"},{"id":"url_0","name":"url","useage":"用于验证网址(包含协议名)"}]
