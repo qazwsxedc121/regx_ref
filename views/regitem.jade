@@ -11,7 +11,8 @@ block main
     div
       h3 用途描述:
       p #{describe}
-    div 参考网址:
+    div
+      h3 参考网址:
       table.pure-table
         thead
           tr
@@ -21,7 +22,21 @@ block main
           each val, index in ref
             tr
               td #{index}
-              td: a(href=val.link) #{val.sitename}
-
-
-
+              td: a(href=val.link,target='_blank') #{val.sitename}
+    div
+      if compare
+        h3 相关的正则表达式
+        ol
+          each val, index in compare
+            li: a(href=val.link) #{val.name}
+    div
+      if matches
+        h3 可以匹配的例子
+        ol
+          each val in matches
+            li: p #{val}
+      if notmatches
+        h3 不能匹配的例子
+        ol
+          each val in notmatches
+            li: p #{val}

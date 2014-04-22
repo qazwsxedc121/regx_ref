@@ -8,6 +8,8 @@
             "link":"http://blog.trojanhunter.com/2012/09/26/the-best-regex-to-validate-an-email-address/"
         }
     ],
+    "matches":["abcd@abc.com","abc.ab123@abc.ab123.com"],
+    "notmatches":["abc@abc.abcde","abc@adf.123"],
     "compare":[
     ]
 }

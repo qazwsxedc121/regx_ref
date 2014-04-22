@@ -1,8 +1,11 @@
 {
     "name":"ipv4",
-    "expression":"((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)",
+    "expression":"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)",
     "describe":"用于验证ipv4地址",
     "ref":[
-
+        {
+            "sitename":"Orelly Answers",
+            "link":"http://answers.oreilly.com/topic/318-how-to-match-ipv4-addresses-with-regular-expressions/"
+        }
     ]
 }
