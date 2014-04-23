@@ -7,7 +7,7 @@ block main
   div.content
     div
       h3 表达式:
-      p #{expression}
+      p: span.regex #{expression}
     div
       h3 用途描述:
       p #{describe}
@@ -40,3 +40,8 @@ block main
         ol
           each val in notmatches
             li: p #{val}
+
+block script
+  script(type='text/javascript',src='/javascripts/regex-colorizer.js')
+  script(type='text/javascript').
+    RegexColorizer.colorizeAll();
