@@ -9,6 +9,16 @@ block main
       h3 表达式:
       p: span.regex #{expression}
     div
+      h4 测试一下:
+      div#test_regex.pure-form
+        div#test_regex_1
+          textarea#test
+        div#test_regex_2
+          p: button#test_submit.pure-button(type='button') 匹配
+        div#test_regex_3
+          textarea#test_result
+        div.clearfix
+    div
       h3 用途描述:
       p #{describe}
     div
@@ -43,5 +53,11 @@ block main
 
 block script
   script(type='text/javascript',src='/javascripts/regex-colorizer.js')
+  script(type='text/javascript',src='//code.jquery.com/jquery-1.11.0.min.js')
   script(type='text/javascript').
     RegexColorizer.colorizeAll();
+    var regex = new RegExp("#{expression}","g");
+    $("#test_submit").on("click",function(){
+        var test_string = $("#test").val();
+        $("#test_result").val(test_string.match(regex).join("\n"));
+    });
