@@ -42,8 +42,22 @@ a {
   height: 100px;
   width: 300px;
 }
+.regexp {
+  padding: 10px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
 .clearfix {
   clear: both;
+}
+.pull-right {
+  float: right;
+}
+.pull-right:after {
+  clear: both;
+}
+.button-small {
+  font-size: 85%;
 }
 .regex {
   font-family: Monospace;

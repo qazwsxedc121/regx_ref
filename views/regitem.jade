@@ -7,7 +7,13 @@ block main
   div.content
     div
       h3 表达式:
-      p: span.regex !{expression}
+      pre.regexp
+        code.regex !{expression}
+        span.pull-right
+          button.pure-button.button-small#copy-button(data-clipboard-text="!{expression}") Copy
+    div
+      h3 用途描述:
+      p #{describe}
     div
       h4 测试一下:
       div#test_regex.pure-form
@@ -18,9 +24,6 @@ block main
         div#test_regex_3
           textarea#test_result
         div.clearfix
-    div
-      h3 用途描述:
-      p #{describe}
     div
       h3 参考网址:
       table.pure-table
@@ -53,10 +56,20 @@ block main
 
 block script
   script(type='text/javascript',src='/javascripts/regex-colorizer.js')
+
+  script(src="/javascripts/ZeroClipboard.min.js")
   script(type='text/javascript').
     RegexColorizer.colorizeAll();
     var regex = /!{expression}/g;
     $("#test_submit").on("click",function(){
         var test_string = $("#test").val();
         $("#test_result").val(test_string.match(regex).join("\n"));
+    });
+    var client = new ZeroClipboard( document.getElementById("copy-button"), {
+        moviePath: "/javascripts/ZeroClipboard.swf"
+    });
+    client.on("load", function(client) {
+        client.on( "complete", function(client, args) {
+            alert("已经复制表达式到剪贴板!");
+        });
     });
