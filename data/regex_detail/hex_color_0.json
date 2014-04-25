@@ -1,0 +1,15 @@
+{
+    "name":"hex_color",
+    "expression":"#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})",
+    "describe":"用于验证16进制的颜色值,必须用#开头,必须为3位或者6位",
+    "ref":[
+        {
+            "sitename":"Mkyong.com",
+            "link":"http://www.mkyong.com/regular-expressions/how-to-validate-hex-color-code-with-regular-expression/"
+        }
+    ],
+    "matches":["#1f1f1F", "#AFAFAF","#1AFFa1","#222fff", "#F00", "#F00"],
+    "notmatches":["123456","#ahahah","#afaf","#123abcd"],
+    "compare":[
+    ]
+}

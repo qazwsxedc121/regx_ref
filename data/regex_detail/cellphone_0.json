@@ -1,0 +1,11 @@
+{
+    "name":"cellphone",
+    "expression":"(1(([35][0-9])|(47)|[8][0126789]))\\d{8}",
+    "describe":"用于验证中国大陆地区的手机号码,不能有区号及分隔符(逗号)",
+    "ref":[
+        {
+            "sitename":"acles 的 blog",
+            "link":"http://www.cnblogs.com/acles/archive/2008/07/16/1244018.html"
+        }
+    ]
+}

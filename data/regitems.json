@@ -1,1 +1,1 @@
-[{"id":"email_0","name":"email","useage":"用于验证邮箱"},{"id":"ipv4_0","name":"ipv4","useage":"用于验证ipv4地址"},{"id":"url_0","name":"url","useage":"用于验证网址(包含协议名)"}]
+[{"id":"cellphone_0","name":"cellphone","useage":"用于验证中国大陆地区的手机号码,不能有区号及分隔符(逗号)"},{"id":"email_0","name":"email","useage":"用于验证邮箱"},{"id":"hex_color_0","name":"hex_color","useage":"用于验证16进制的颜色值,必须用#开头,必须为3位或者6位"},{"id":"ipv4_0","name":"ipv4","useage":"用于验证ipv4地址"},{"id":"url_0","name":"url","useage":"用于验证网址(包含协议名)"}]

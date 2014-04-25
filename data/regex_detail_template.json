@@ -1,0 +1,19 @@
+{
+    "name":"",
+    "expression":"",
+    "describe":"",
+    "ref":[
+        {
+            "sitename":"",
+            "link":""
+        }
+    ],
+    "matches":["",""],
+    "notmatches":["",""],
+    "compare":[
+        {
+            "name":"",
+            "link":""
+        }
+    ]
+}
