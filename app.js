@@ -42,6 +42,7 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/regitem/:id', regitem.regitem);
 app.get('/md_page/:name', md_page.page);
+app.get('/static_page/:name', md_page.static_page);
 
 app.post('/regitem', regitem.post_regitem);
 

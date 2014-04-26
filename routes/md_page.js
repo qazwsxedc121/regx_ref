@@ -18,6 +18,20 @@
     });
   };
 
+  exports.static_page = function(req, res) {
+    var content, fn;
+    content = fs.readFileSync("md_page/" + req.params["name"] + ".html", {
+      encoding: "utf-8"
+    });
+    fn = function(i) {
+      return i;
+    };
+    return res.render("md_page", {
+      "md": fn,
+      "markdownContent": content
+    });
+  };
+
 }).call(this);
 
 //# sourceMappingURL=md_page.map
