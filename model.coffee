@@ -2,6 +2,7 @@ fs = require("fs")
 
 regitem_path = "data/regex_detail"
 regitem_index_path = "data/regitems.json"
+db_path = "data/db.json"
 
 all_ids = ()->
   flist = fs.readdirSync(regitem_path)
@@ -9,6 +10,11 @@ all_ids = ()->
 
 exports.all_ids_data = ()->
   JSON.parse(fs.readFileSync(regitem_index_path))
+
+exports.db = JSON.parse(fs.readFileSync(db_path))
+
+exports.update_db = ()->
+  fs.writeFileSync(db_path,exports.db)
 
 exports.all_ids = all_ids
 
