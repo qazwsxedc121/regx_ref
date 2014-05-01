@@ -1,0 +1,20 @@
+//
+   Created by guoxc on 14-5-1.
+
+extends sidebar_layout
+block main
+  div.header
+    h1 所有正则表达式
+  div.content
+    table.pure-table
+      thead
+        tr
+          th #
+          th 名称
+          th 用途
+      tbody
+        each val, index in regex_list
+          tr
+            td #{index}
+            td: a(href="regitem/#{val.id}") #{val.name}
+            td #{val.useage}

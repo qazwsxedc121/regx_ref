@@ -5,7 +5,6 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var regitem = require('./routes/regitem');
 var md_page = require('./routes/md_page');
 var http = require('http');
@@ -39,7 +38,7 @@ var model = require('./model');
 model.indexing_regitems();
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/all', routes.all);
 app.get('/regitem/:id', regitem.regitem);
 app.get('/md_page/:name', md_page.page);
 app.get('/static_page/:name', md_page.static_page);

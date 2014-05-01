@@ -21,3 +21,11 @@ exports.index = function(req, res){
         regex_list: regex_list
     });
 };
+
+exports.all = function(req, res){
+    var all_regex = model.all_ids_data();
+    res.render('regex_list', {
+        title: '正则表达式参考',
+        regex_list: all_regex
+    });
+};
