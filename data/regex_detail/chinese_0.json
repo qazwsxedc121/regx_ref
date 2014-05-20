@@ -1,0 +1,13 @@
+{
+    "name":"chinese",
+    "expression":"[\\u4e00-\\u9fa5]",
+    "describe":"匹配中文字符",
+    "ref":[
+        {
+            "sitename":"月光博客",
+            "link":"http://www.williamlong.info/archives/433.html"
+        }
+    ],
+    "matches":["啊","是"],
+    "notmatches":["a","b"]
+}
