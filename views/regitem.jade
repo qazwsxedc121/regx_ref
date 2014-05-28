@@ -59,8 +59,9 @@ block script
 
   script(src="/javascripts/ZeroClipboard.min.js")
   script(type='text/javascript').
+    var regex_str = $("code.regex").html();
     RegexColorizer.colorizeAll();
-    var regex = /!{expression}/g;
+    var regex = new RegExp(regex_str,"g");
     $("#test_submit").on("click",function(){
         var test_string = $("#test").val();
         $("#test_result").val(test_string.match(regex).join("\n"));

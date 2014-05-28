@@ -1,7 +1,9 @@
 {
     "name":"url",
-    "expression":"[a-zA-z]+://[^\\s]*",
+    "expression":"[a-zA-z]+:\/\/[^\\s]*",
     "describe":"用于验证网址(包含协议名)",
     "ref":[
-    ]
+    ],
+    "matches":["abcd://abc.com","absd//bc"],
+    "notmatches":["abc123://bc.abcde","abc.ef.com"]
 }
