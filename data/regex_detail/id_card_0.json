@@ -1,0 +1,17 @@
+{
+    "name":"身份证号(18位)",
+    "expression":"\\d{17}([0-9xX])",
+    "describe":"中国大陆地区身份证号,18位,最后一位可以是x或者X",
+    "ref":[
+        {
+            "sitename":"seltqiu的专栏",
+            "link":"http://blog.csdn.net/seltqiu/article/details/6416693"
+        }
+    ],
+    "compare":[
+        {
+            "name":"身份证号(15位)",
+            "link":"id_card_1"
+        }
+    ]
+}

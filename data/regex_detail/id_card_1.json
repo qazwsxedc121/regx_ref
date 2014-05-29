@@ -1,0 +1,11 @@
+{
+    "name":"身份证号(15位)",
+    "expression":"\\d{15}",
+    "describe":"15位身份证号",
+    "compare":[
+        {
+            "name":"身份证号(18位)",
+            "link":"id_card_0"
+        }
+    ]
+}

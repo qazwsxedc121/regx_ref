@@ -25,17 +25,18 @@ block main
           textarea#test_result
         div.clearfix
     div
-      h3 参考网址:
-      table.pure-table
-        thead
-          tr
-            th #
-            th source
-        tbody
-          each val, index in ref
+      if ref
+        h3 参考网址:
+        table.pure-table
+          thead
             tr
-              td #{index}
-              td: a(href=val.link,target='_blank') #{val.sitename}
+              th #
+              th source
+          tbody
+            each val, index in ref
+              tr
+                td #{index}
+                td: a(href=val.link,target='_blank') #{val.sitename}
     div
       if compare
         h3 相关的正则表达式
