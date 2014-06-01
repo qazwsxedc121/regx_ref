@@ -14,13 +14,15 @@
     });
     return res.render("md_page", {
       "md": md,
-      "markdownContent": markdown_content
+      "markdownContent": markdown_content,
+      "menu_selected": "/md_page/" + page_name
     });
   };
 
   exports.static_page = function(req, res) {
-    var content, fn;
-    content = fs.readFileSync("md_page/" + req.params["name"] + ".html", {
+    var content, fn, name;
+    name = req.params["name"];
+    content = fs.readFileSync("md_page/" + name + ".html", {
       encoding: "utf-8"
     });
     fn = function(i) {
@@ -28,7 +30,8 @@
     };
     return res.render("md_page", {
       "md": fn,
-      "markdownContent": content
+      "markdownContent": content,
+      "menu_selected": "/static_page/" + name
     });
   };
 

@@ -1,10 +1,17 @@
 //
    Created by guoxc on 14-3-17.
 
+
+- var menu_links = [];
+- menu_links[0] = {link:"/all",title:"所有正则表达式"}
+- menu_links[1] = {link:"/md_page/book_recommend",title:"书籍推荐"}
+- menu_links[2] = {link:"/md_page/ref_websites", title:"参考网站"}
+- menu_links[3] = {link:"/static_page/cheat_sheet", title:"语法速查"}
+
 mixin sidebar-links(links)
   ul#sidebar-ul
     each link in links
-      if link.selected
+      if menu_selected == link.link
         li.pure-menu-selected: a(href="#{link.link}") #{link.title}
       else
         li: a(href="#{link.link}") #{link.title}
@@ -12,8 +19,4 @@ mixin sidebar-links(links)
 div#menu
   div.pure-menu.pure-menu-open#sidebar
     a.pure-menu-heading(href="/") 正则表达式权威参考
-    ul#sidebar-ul
-      li: a(href="/all") 所有正则表达式
-      li: a(href="/md_page/book_recommend") 书籍推荐
-      li: a(href="/md_page/ref_websites") 参考网站
-      li: a(href="/static_page/cheat_sheet") 语法速查
+    +sidebar-links(menu_links)
