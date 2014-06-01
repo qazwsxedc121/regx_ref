@@ -1,10 +1,19 @@
 //
    Created by guoxc on 14-3-17.
 
+mixin sidebar-links(links)
+  ul#sidebar-ul
+    each link in links
+      if link.selected
+        li.pure-menu-selected: a(href="#{link.link}") #{link.title}
+      else
+        li: a(href="#{link.link}") #{link.title}
+
 div#menu
-  div.pure-menu.pure-menu-open
+  div.pure-menu.pure-menu-open#sidebar
     a.pure-menu-heading(href="/") 正则表达式权威参考
-    a.pure-menu-children(href="/all") 所有正则表达式
-    a.pure-menu-children(href="/md_page/book_recommend") 书籍推荐
-    a.pure-menu-childern(href="/md_page/ref_websites") 参考网站
-    a.pure-menu-childern(href="/static_page/cheat_sheet") 语法速查
+    ul#sidebar-ul
+      li: a(href="/all") 所有正则表达式
+      li: a(href="/md_page/book_recommend") 书籍推荐
+      li: a(href="/md_page/ref_websites") 参考网站
+      li: a(href="/static_page/cheat_sheet") 语法速查
