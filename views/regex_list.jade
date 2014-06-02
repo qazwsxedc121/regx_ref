@@ -5,16 +5,30 @@ extends sidebar_layout
 block main
   div.header
     h1 所有正则表达式
-  div.content
+  div.content#all-list
     table.pure-table
       thead
         tr
           th #
           th 名称
           th 用途
-      tbody
+      tbody.list
         each val, index in regex_list
           tr
-            td #{index}
-            td: a(href="regitem/#{val.id}") #{val.name}
-            td #{val.useage}
+            td.index #{index}
+            td.name
+              a(href="regitem/#{val.id}") #{val.name}
+            td.usage #{val.useage}
+    ul.pagination.pure-paginator
+
+block script
+  script(type='text/javascript').
+    var options = {
+      valueNames: [ 'index', 'name', 'usage' ],
+      page: 20,
+      plugins: [
+        ListPagination({})
+      ]
+    };
+    var allList = new List('all-list', options);
+
