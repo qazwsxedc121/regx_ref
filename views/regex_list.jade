@@ -6,6 +6,7 @@ block main
   div.header
     h1 所有正则表达式
   div.content#all-list
+    input.fuzzy-search
     table.pure-table
       thead
         tr
@@ -27,7 +28,8 @@ block script
       valueNames: [ 'index', 'name', 'usage' ],
       page: 20,
       plugins: [
-        ListPagination({})
+        ListPagination({}),
+        ListFuzzySearch()
       ],
       pageClass: "pure-button",
     };
